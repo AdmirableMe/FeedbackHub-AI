@@ -1,161 +1,184 @@
-# FeedbackHub AI
+# 🎯 FeedbackHub AI
 
-AI-powered YouTube comment analysis platform that transforms audience feedback into actionable insights using Natural Language Processing (NLP), sentiment analysis, topic extraction, and Google's Gemini AI.
+<p align="center">
 
----
+AI-powered YouTube Comment Analysis Platform built using Flask, NLP, Hugging Face Transformers, and Google Gemini AI.
 
-## Table of Contents
+</p>
 
-1. Overview
-2. Problem Statement
-3. Solution
-4. Key Features
-5. System Architecture
-6. Technology Stack
-7. Project Structure
-8. Installation
-9. Usage
-10. Future Improvements
-11. License
+<p align="center">
 
----
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web_Framework-black?logo=flask)
+![Google Gemini](https://img.shields.io/badge/Google-Gemini_AI-4285F4?logo=google)
+![YouTube API](https://img.shields.io/badge/API-YouTube_Data-red?logo=youtube)
+![Hugging Face](https://img.shields.io/badge/HuggingFace-Transformers-yellow?logo=huggingface)
+![spaCy](https://img.shields.io/badge/NLP-spaCy-09A3D5)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-# Overview
-
-Understanding audience feedback on YouTube videos becomes increasingly difficult as the number of comments grows. Manually reading hundreds or thousands of comments is time-consuming and often fails to provide an overall understanding of audience sentiment.
-
-FeedbackHub AI automates this process by collecting comments from any public YouTube video, analyzing them using Natural Language Processing techniques, and generating a structured AI-powered audience report.
-
-The project combines traditional NLP techniques with Large Language Models (LLMs) to provide meaningful insights rather than raw comment data.
+</p>
 
 ---
 
-# Problem Statement
+Analyze thousands of YouTube comments in seconds and generate AI-powered audience insights, sentiment analysis, trending topics, and structured reports—all from a single video URL.
 
-Content creators, marketers, educators, and businesses often rely on YouTube comments to understand audience opinions.
+## 📌 Table of Contents
 
-However, large comment sections present several challenges:
+- [Overview](#-overview)
+- [Problem Statement](#-problem-statement)
+- [Solution](#-solution)
+- [Features](#-features)
+- [System Architecture](#-system-architecture)
+- [Technology Stack](#-technology-stack)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Future Roadmap](#-future-roadmap)
+- [License](#-license)
 
-- Reading every comment is impractical.
-- Important feedback is buried among repetitive comments.
-- Identifying overall audience sentiment is difficult.
-- Discovering trending discussion topics requires manual effort.
-- Extracting meaningful insights from thousands of comments is time-consuming.
+## 📖 Overview
 
-FeedbackHub AI addresses these challenges through automated AI-powered analysis.
+YouTube comment sections often contain valuable audience feedback, suggestions, opinions, and discussions. However, manually reading hundreds or thousands of comments to understand audience sentiment is inefficient and time-consuming.
 
----
+FeedbackHub AI automates this process by collecting comments from any public YouTube video, analyzing them using Natural Language Processing (NLP) techniques, and generating a structured AI-powered audience report.
 
-# Solution
+The project combines traditional machine learning techniques with Google's Gemini AI to transform raw comment data into meaningful insights that help users quickly understand audience perception.
 
-FeedbackHub AI performs an end-to-end analysis pipeline:
+## ⚠️ Problem Statement
 
-1. Accepts a public YouTube video URL.
-2. Retrieves comments using the YouTube Data API.
-3. Cleans and preprocesses comment text.
-4. Performs sentiment analysis.
-5. Extracts the most discussed topics.
-6. Selects representative comments.
-7. Uses Google's Gemini AI to generate a comprehensive audience insights report.
-8. Presents all results in an easy-to-understand web dashboard.
+Large YouTube comment sections are difficult to analyze manually.
 
----
+Common challenges include:
 
-# Key Features
+- Thousands of comments requiring manual review
+- Difficulty understanding overall audience sentiment
+- Important feedback hidden among repetitive comments
+- Trending discussion topics not immediately visible
+- Time-consuming analysis for creators and businesses
+
+These challenges make it difficult to quickly understand audience opinion and identify meaningful feedback.
+
+## 💡 Solution
+
+FeedbackHub AI provides an automated analysis pipeline that converts large volumes of YouTube comments into structured insights.
+
+The application:
+
+- Retrieves comments using the YouTube Data API
+- Cleans and preprocesses comment text
+- Performs sentiment analysis using Hugging Face Transformers
+- Extracts trending topics using TF-IDF and spaCy
+- Selects representative comments
+- Generates an AI-powered audience report using Google Gemini
+- Displays all results through a responsive Flask web application
+
+## 🚀 Features
+
+### AI Analysis
+
+- AI-generated audience insights using Google Gemini
+- Automated summary of large YouTube comment sections
+- Actionable audience feedback reports
+
+### Natural Language Processing
+
+- Sentiment analysis using Hugging Face Transformers
+- Topic extraction using TF-IDF
+- Named Entity Recognition (NER) using spaCy
+- Comment preprocessing and text cleaning
+
+### YouTube Integration
 
 - Analyze comments from any public YouTube video
-- Retrieve comments using the YouTube Data API v3
-- Automatic comment preprocessing and cleaning
-- Sentiment analysis using Hugging Face Transformers
-- Topic extraction using TF-IDF and spaCy
-- AI-generated audience insights using Google Gemini
-- Summary statistics for positive, neutral, and negative comments
-- Responsive web interface built with Flask and Bootstrap
-- Modular project architecture for easy maintenance
+- Fetch comments using the YouTube Data API v3
+- Automatic retrieval of large comment datasets
 
----
+### Web Application
 
-# System Architecture
+- Interactive Flask-based dashboard
+- Responsive Bootstrap interface
+- Comment preview section
+- Topic visualization
+- Sentiment statistics
+
+## 🏗️ System Architecture
 
 ```text
                     User
                       │
                       ▼
-           Enter YouTube Video URL
+          Enter YouTube Video URL
                       │
                       ▼
-           YouTube Data API v3
+          YouTube Data API v3
                       │
                       ▼
-            Retrieve Video Comments
+         Retrieve Video Comments
                       │
                       ▼
-          Comment Cleaning Pipeline
+      Comment Cleaning Pipeline
                       │
-         ┌────────────┴────────────┐
-         ▼                         ▼
- Sentiment Analysis         Topic Extraction
-         │                         │
-         └────────────┬────────────┘
+          ┌───────────┴───────────┐
+          ▼                       ▼
+  Sentiment Analysis      Topic Extraction
+          │                       │
+          └───────────┬───────────┘
                       ▼
-      Representative Comment Selection
-                      │
-                      ▼
-          Google Gemini AI Analysis
+    Representative Comment Selection
                       │
                       ▼
-         AI Audience Insights Report
+         Google Gemini AI Analysis
                       │
                       ▼
-            FeedbackHub AI Dashboard
+      AI Audience Insights Report
+                      │
+                      ▼
+         FeedbackHub AI Dashboard
 ```
 
----
+## 🛠️ Technology Stack
 
-# Technology Stack
+### Backend
 
-## Backend
-
-- Python
-- Flask
-
-The backend manages request handling, API communication, NLP processing, and AI report generation.
+| Technology | Purpose |
+|------------|---------|
+| Python | Core programming language |
+| Flask | Web framework and application routing |
 
 ---
 
-## Artificial Intelligence & NLP
+### Artificial Intelligence & NLP
 
-- Google Gemini API
-- Hugging Face Transformers
-- spaCy
-- Scikit-learn (TF-IDF)
-- NLTK
-
-These libraries are responsible for sentiment analysis, topic extraction, natural language preprocessing, and AI-generated audience reports.
-
----
-
-## APIs
-
-- YouTube Data API v3
-- Google Gemini API
-
-The application retrieves public YouTube comments and generates AI-powered insights using Google's latest language models.
+| Technology | Purpose |
+|------------|---------|
+| Google Gemini | AI-powered audience report generation |
+| Hugging Face Transformers | Sentiment analysis |
+| spaCy | Natural language processing and named entity recognition |
+| Scikit-learn | TF-IDF topic extraction |
+| NLTK | Text preprocessing |
 
 ---
 
-## Frontend
+### APIs
 
-- HTML5
-- CSS3
-- Bootstrap 5
-- JavaScript
-
-The frontend provides a clean and responsive interface for displaying analysis results.
+| Technology | Purpose |
+|------------|---------|
+| YouTube Data API v3 | Retrieve public YouTube comments |
+| Google Gemini API | Generate AI-powered summaries |
 
 ---
 
-# Project Structure
+### Frontend
+
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Page structure |
+| CSS3 | Styling |
+| Bootstrap 5 | Responsive layout |
+| JavaScript | Client-side interactions |
+
+## 📂 Project Structure
 
 ```text
 FeedbackHub-AI/
@@ -166,9 +189,9 @@ FeedbackHub-AI/
 │   └── topic_extractor.py
 │
 ├── services/
-│   ├── comment_processor.py
+│   ├── youtube_api.py
 │   ├── sentiment.py
-│   └── youtube_api.py
+│   └── comment_processor.py
 │
 ├── static/
 │   ├── css/
@@ -189,117 +212,10 @@ FeedbackHub-AI/
 
 ### Directory Description
 
-| Directory | Purpose |
-|------------|---------|
-| **ai/** | Gemini integration and AI report generation |
-| **services/** | Core application logic including sentiment analysis and YouTube API interaction |
+| Directory | Description |
+|------------|-------------|
+| **ai/** | AI integration, report generation, and topic extraction |
+| **services/** | Core business logic including YouTube API interaction and sentiment analysis |
 | **templates/** | HTML templates rendered by Flask |
 | **static/** | CSS and JavaScript assets |
-| **utils/** | Utility functions and helper methods |
-
----
-
-# Installation
-
-## Clone the repository
-
-```bash
-git clone https://github.com/AdmirableMe/FeedbackHub-AI.git
-```
-
-Navigate into the project directory.
-
-```bash
-cd FeedbackHub-AI
-```
-
----
-
-## Create a Virtual Environment
-
-### Windows
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### Linux / macOS
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Environment Variables
-
-Create a `.env` file in the project root.
-
-```env
-YOUTUBE_API_KEY=YOUR_YOUTUBE_API_KEY
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-```
-
----
-
-## Run the Application
-
-```bash
-python app.py
-```
-
-Open your browser and navigate to:
-
-```
-http://127.0.0.1:5000
-```
-
----
-
-# Usage
-
-1. Launch the application.
-2. Paste a public YouTube video URL.
-3. Click **Analyze**.
-4. Wait while comments are collected and processed.
-5. Review:
-   - Sentiment distribution
-   - Trending topics
-   - AI-generated audience insights
-   - Representative comments
-
----
-
-# Future Improvements
-
-The project is designed with extensibility in mind.
-
-Planned enhancements include:
-
-- Interactive sentiment charts
-- Downloadable PDF reports
-- Search history
-- Comparison between multiple YouTube videos
-- Multi-language comment analysis
-- User authentication
-- Cloud deployment
-- Advanced analytics dashboard
-- Export analysis results as CSV
-
----
-
-# License
-
-This project is licensed under the MIT License.
-
-See the LICENSE file for more information.
+| **utils/** | Helper functions and utilities |
