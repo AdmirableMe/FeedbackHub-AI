@@ -1,0 +1,277 @@
+body {
+
+    background: #eef3f8;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar {
+
+    padding: 18px;
+
+}
+
+
+/* ===========================
+   Statistics Cards
+=========================== */
+
+.stats-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+
+    transition: .25s;
+}
+
+.stats-card:hover {
+
+    transform: translateY(-5px);
+}
+
+.stats-card h6 {
+
+    color: #777;
+
+    margin-bottom: 10px;
+}
+
+.stats-card h2 {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    margin: 0;
+}
+
+
+/* ===========================
+   Cards
+=========================== */
+
+.card {
+
+    border: none;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+
+/* ===========================
+   Topic Badges
+=========================== */
+
+.topic-badge {
+
+    background: #0d6efd;
+
+    color: white;
+
+    padding: 8px 16px;
+
+    margin: 6px;
+
+    font-size: 15px;
+
+    border-radius: 25px;
+
+    display: inline-block;
+
+    transition: .2s;
+}
+
+.topic-badge:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* ===========================
+   Comment Boxes
+=========================== */
+
+.comment-box {
+
+    background: #f8f9fa;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-left: 5px solid #0d6efd;
+
+    border-radius: 10px;
+
+    transition: .2s;
+}
+
+.comment-box:hover {
+
+    background: #f2f7ff;
+}
+
+
+/* ===========================
+   AI Audience Insights
+=========================== */
+
+.ai-report {
+
+    color: #2c3e50;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    overflow-wrap: break-word;
+
+    word-wrap: break-word;
+}
+
+
+/* Headings */
+
+.ai-report h1 {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: #0d6efd;
+
+    margin-top: 10px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 3px solid #0d6efd;
+
+    padding-bottom: 10px;
+}
+
+.ai-report h2 {
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
+
+    color: #34495e;
+
+    margin-top: 30px;
+
+    margin-bottom: 15px;
+}
+
+.ai-report h3 {
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    margin-top: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Paragraphs */
+
+.ai-report p {
+
+    margin-bottom: 18px;
+
+    text-align: justify;
+}
+
+
+/* Lists */
+
+.ai-report ul {
+
+    padding-left: 25px;
+
+    margin-bottom: 20px;
+}
+
+.ai-report li {
+
+    margin-bottom: 10px;
+}
+
+
+/* Bold text */
+
+.ai-report strong {
+
+    color: #0d6efd;
+}
+
+
+/* Code blocks (future-proof) */
+
+.ai-report pre {
+
+    background: #f8f9fa;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    overflow-x: auto;
+}
+
+
+/* Inline code */
+
+.ai-report code {
+
+    background: #eef3f8;
+
+    padding: 2px 6px;
+
+    border-radius: 5px;
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+
+    .stats-card {
+
+        margin-bottom: 15px;
+    }
+
+    .ai-report h1 {
+
+        font-size: 1.6rem;
+    }
+
+    .ai-report h2 {
+
+        font-size: 1.3rem;
+    }
+
+    .ai-report {
+
+        font-size: .95rem;
+    }
+
+}
